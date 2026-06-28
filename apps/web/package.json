@@ -12,8 +12,11 @@
   "dependencies": {
     "@gem/auth": "workspace:*",
     "@gem/ui": "workspace:*",
+    "@gsap/react": "^2.1.2",
     "better-auth": "^1.2.7",
+    "gsap": "^3.13.0",
     "lucide-react": "^1.17.0",
+    "motion": "^12.23.12",
     "next": "16.2.7",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -26,6 +29,7 @@
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "16.2.7",
+    "shadcn": "^4.12.0",
     "tailwindcss": "^4.1.10",
     "typescript": "^5.8.3"
   }
