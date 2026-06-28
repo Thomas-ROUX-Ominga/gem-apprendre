@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@gem/auth'
 
 export async function middleware(request: NextRequest) {
-  const session = await auth.api.getSession({ headers: request.headers })
+  const res = await fetch(new URL('/api/auth/get-session', request.nextUrl.origin), {
+    headers: { cookie: request.headers.get('cookie') ?? '' },
+  })
 
-  if (!session) {
+  const session = res.ok ? await res.json() : null
+
+  if (!session?.user) {
     const loginUrl = new URL('/login', request.url)
     loginUrl.searchParams.set('callbackUrl', request.nextUrl.pathname)
     return NextResponse.redirect(loginUrl)
