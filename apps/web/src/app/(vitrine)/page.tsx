@@ -63,14 +63,6 @@ export default function HomePage() {
     <>
       {/* ---- HERO ---- */}
       <section className="hero" id="diagnostic">
-        <div className="hero-aurora" aria-hidden="true">
-          <Aurora
-            colorStops={['#8a3d67', '#d9744e', '#bc5e8e']}
-            amplitude={0.9}
-            blend={0.5}
-            speed={0.5}
-          />
-        </div>
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">
