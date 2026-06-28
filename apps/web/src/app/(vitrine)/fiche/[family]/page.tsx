@@ -65,6 +65,7 @@ export default async function FichePage({ params }: Props) {
           <div className="fiche-hero-media">
             <ImageSlot
               placeholder={f.ambiance}
+              className="fiche-hero-img"
               style={{ width: '100%', height: 460, borderRadius: 16 }}
             />
           </div>

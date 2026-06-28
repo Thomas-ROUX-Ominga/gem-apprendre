@@ -43,6 +43,7 @@ export default function QuiSuisJePage() {
           <div className="cy-portrait">
             <ImageSlot
               placeholder="Portrait de Cynthia Roux"
+              className="cy-portrait-img"
               style={{ width: '100%', height: 520, borderRadius: 16 }}
             />
           </div>
