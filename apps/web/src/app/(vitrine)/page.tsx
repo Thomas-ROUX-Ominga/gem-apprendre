@@ -5,6 +5,8 @@ import UniversCards from '@/components/UniversCards'
 import FadeContent from '@/components/FadeContent'
 import ShinyText from '@/components/ShinyText'
 import AnimatedStats from '@/components/AnimatedStats'
+import Aurora from '@/components/Aurora'
+import Particles from '@/components/Particles'
 
 const UNIVERS = [
   {
@@ -61,6 +63,14 @@ export default function HomePage() {
     <>
       {/* ---- HERO ---- */}
       <section className="hero" id="diagnostic">
+        <div className="hero-aurora" aria-hidden="true">
+          <Aurora
+            colorStops={['#8a3d67', '#d9744e', '#bc5e8e']}
+            amplitude={0.9}
+            blend={0.5}
+            speed={0.5}
+          />
+        </div>
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">
@@ -112,6 +122,14 @@ export default function HomePage() {
           <AnimatedStats />
           <FadeContent delay={480} duration={700} threshold={0.1}>
             <div className="qualiopi">
+              <div className="qualiopi-orb" aria-hidden="true">
+                <Aurora
+                  colorStops={['#bc5e8e', '#471c32', '#d9744e']}
+                  amplitude={1.2}
+                  blend={0.4}
+                  speed={0.6}
+                />
+              </div>
               <div className="seal">Q</div>
               <div className="q-body">
                 <strong>Certifié Qualiopi</strong>
@@ -150,6 +168,18 @@ export default function HomePage() {
 
       {/* ---- FINAL CTA ---- */}
       <section className="section final-cta" id="final">
+        <div className="final-cta-particles" aria-hidden="true">
+          <Particles
+            particleCount={80}
+            particleSpread={14}
+            speed={0.15}
+            particleColors={['#8a3d67', '#d9744e', '#bc5e8e', '#a24f7a']}
+            alphaParticles={true}
+            particleBaseSize={90}
+            sizeRandomness={0.9}
+            disableRotation={false}
+          />
+        </div>
         <div className="shell-narrow">
           <FadeContent duration={700} threshold={0.2}>
             <h2>Le premier pas, c&apos;est <em>un échange</em>.</h2>
