@@ -224,6 +224,27 @@ body {
 @keyframes fadeUp { from { transform: translateY(8px); opacity: 0; } to { transform: none; opacity: 1; } }
 .q-anim { animation: fadeUp .32s cubic-bezier(.2,.8,.2,1); }
 
+/* ---- Glassmorphism — section univers ---- */
+.section-univers {
+  position: relative; overflow: hidden;
+  padding: 92px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.section-univers-aurora {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+}
+.section-univers-glass {
+  position: absolute; inset: 0; z-index: 1;
+  background: rgba(243, 239, 230, 0.58);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border-top: 1px solid rgba(255,255,255,0.55);
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+.section-univers > .shell { position: relative; z-index: 2; }
+@media (max-width: 600px) { .section-univers { padding: 48px 0; } }
+
 /* ---- Background animation containers ---- */
 .hero-aurora {
   position: absolute; inset: 0;
@@ -232,11 +253,13 @@ body {
 .hero .shell { position: relative; z-index: 1; }
 
 .final-cta { position: relative; overflow: hidden; }
-.final-cta-particles {
-  position: absolute; inset: 0;
-  pointer-events: none; z-index: 0; opacity: 0.55;
-}
 .final-cta .shell-narrow { position: relative; z-index: 1; }
+
+/* Hero bottom waves */
+.hero-waves {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 150px; pointer-events: none; z-index: 1; opacity: 0.45;
+}
 
 .qualiopi-orb {
   position: absolute; inset: 0;

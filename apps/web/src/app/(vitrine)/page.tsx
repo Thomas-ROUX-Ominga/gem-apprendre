@@ -6,7 +6,7 @@ import FadeContent from '@/components/FadeContent'
 import ShinyText from '@/components/ShinyText'
 import AnimatedStats from '@/components/AnimatedStats'
 import Aurora from '@/components/Aurora'
-import Particles from '@/components/Particles'
+import Waves from '@/components/Waves'
 
 const UNIVERS = [
   {
@@ -94,10 +94,27 @@ export default function HomePage() {
           </div>
           <Diagnostic />
         </div>
+        <div className="hero-waves" aria-hidden="true">
+          <Waves
+            lineColor="#bc5e8e"
+            backgroundColor="transparent"
+            waveSpeedX={0.012}
+            waveSpeedY={0.004}
+          />
+        </div>
       </section>
 
       {/* ---- 3 UNIVERS ---- */}
-      <section className="section section-soft" id="univers">
+      <section className="section-univers" id="univers">
+        <div className="section-univers-aurora" aria-hidden="true">
+          <Aurora
+            colorStops={['#8a3d67', '#bc5e8e', '#d9744e']}
+            amplitude={0.8}
+            blend={0.45}
+            speed={0.35}
+          />
+        </div>
+        <div className="section-univers-glass" aria-hidden="true" />
         <div className="shell">
           <FadeContent duration={700} threshold={0.15}>
             <div className="section-head">
@@ -168,18 +185,6 @@ export default function HomePage() {
 
       {/* ---- FINAL CTA ---- */}
       <section className="section final-cta" id="final">
-        <div className="final-cta-particles" aria-hidden="true">
-          <Particles
-            particleCount={80}
-            particleSpread={14}
-            speed={0.15}
-            particleColors={['#8a3d67', '#d9744e', '#bc5e8e', '#a24f7a']}
-            alphaParticles={true}
-            particleBaseSize={90}
-            sizeRandomness={0.9}
-            disableRotation={false}
-          />
-        </div>
         <div className="shell-narrow">
           <FadeContent duration={700} threshold={0.2}>
             <h2>Le premier pas, c&apos;est <em>un échange</em>.</h2>
