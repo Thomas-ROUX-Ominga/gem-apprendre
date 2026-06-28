@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-07T00:00:00.000Z",
+  "title": "Design System: Gem'Apprendre",
+  "extensions": {
+    "colorMeta": {
+      "signature": {
+        "role": "primary",
+        "displayName": "La Signature",
+        "canonical": "#8a3d67",
+        "tonalRamp": ["#1d0814", "#2e1022", "#471c32", "#5e2540", "#8a3d67", "#a24f7a", "#bc5e8e", "#f0cfdd", "#faeaf1"]
+      },
+      "signature-mid": {
+        "role": "primary",
+        "displayName": "Signature Mid",
+        "canonical": "#bc5e8e",
+        "tonalRamp": ["#1d0814", "#471c32", "#8a3d67", "#a24f7a", "#bc5e8e", "#d4a0bc", "#e8c8d8", "#f0cfdd", "#faeaf1"]
+      },
+      "signature-deep": {
+        "role": "primary",
+        "displayName": "Signature Deep",
+        "canonical": "#471c32",
+        "tonalRamp": ["#0e0610", "#1d0814", "#2e1022", "#471c32", "#5e2540", "#8a3d67", "#bc5e8e", "#f0cfdd", "#faeaf1"]
+      },
+      "signature-surface": {
+        "role": "primary",
+        "displayName": "Signature Surface",
+        "canonical": "#faeaf1",
+        "tonalRamp": ["#471c32", "#8a3d67", "#bc5e8e", "#d4a0bc", "#e8c8d8", "#f0cfdd", "#f4d6e3", "#faeaf1", "#fdf5f9"]
+      },
+      "terra": {
+        "role": "secondary",
+        "displayName": "Provence Clay",
+        "canonical": "#d9744e",
+        "tonalRamp": ["#2d1208", "#4c2016", "#783823", "#9e4a2d", "#c25f3a", "#d9744e", "#e8a07f", "#f1c0a6", "#fbefe8"]
+      },
+      "terra-deep": {
+        "role": "secondary",
+        "displayName": "Terra Deep",
+        "canonical": "#9e4a2d",
+        "tonalRamp": ["#2d1208", "#4c2016", "#783823", "#9e4a2d", "#c25f3a", "#d9744e", "#e8a07f", "#f1c0a6", "#fbefe8"]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Warm Canvas",
+        "canonical": "#fbf8f2",
+        "tonalRamp": ["#2d2820", "#40392f", "#574e46", "#726a62", "#978f88", "#c4bdb6", "#e4e0d8", "#f3efe6", "#fbf8f2"]
+      },
+      "canvas-soft": {
+        "role": "neutral",
+        "displayName": "Canvas Soft",
+        "canonical": "#f3efe6",
+        "tonalRamp": ["#2d2820", "#40392f", "#574e46", "#726a62", "#978f88", "#c4bdb6", "#dbd8d0", "#f3efe6", "#fbf8f2"]
+      },
+      "canvas-deep": {
+        "role": "neutral",
+        "displayName": "Canvas Deep",
+        "canonical": "#ece6d8",
+        "tonalRamp": ["#2d2820", "#40392f", "#574e46", "#726a62", "#978f88", "#c4bdb6", "#d4d0c8", "#ece6d8", "#f8f5f0"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(22% 0.005 60)",
+        "hexApprox": "#2d2820",
+        "tonalRamp": ["#141210", "#1e1b17", "#2d2820", "#40392f", "#574e46", "#726a62", "#978f88", "#c4bdb6", "#fbf8f2"]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Ink Secondary",
+        "canonical": "oklch(40% 0.006 60)",
+        "hexApprox": "#574e46",
+        "tonalRamp": ["#141210", "#2d2820", "#40392f", "#574e46", "#726a62", "#978f88", "#c4bdb6", "#e4e0d8", "#fbf8f2"]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "oklch(58% 0.006 60)",
+        "hexApprox": "#857d77",
+        "tonalRamp": ["#2d2820", "#40392f", "#574e46", "#726a62", "#857d77", "#a09890", "#c4bdb6", "#e4e0d8", "#fbf8f2"]
+      },
+      "ink-light": {
+        "role": "neutral",
+        "displayName": "Ink Light",
+        "canonical": "oklch(78% 0.005 60)",
+        "hexApprox": "#c4bdb6",
+        "tonalRamp": ["#40392f", "#574e46", "#726a62", "#857d77", "#a09890", "#c4bdb6", "#dbd8d0", "#ece6d8", "#fbf8f2"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display — Cormorant Italic",
+        "purpose": "Hero headline em-word only. The single italic word embedded in a Montserrat heading that signals warmth and human presence. Never a standalone full headline."
+      },
+      "headline": {
+        "displayName": "Headline — Montserrat Bold",
+        "purpose": "Section headings. May include one Cormorant italic em-word. Requires text-wrap: balance at mobile widths."
+      },
+      "title": {
+        "displayName": "Title — Montserrat Bold",
+        "purpose": "Card headings, diagnostic question text, booking funnel step labels."
+      },
+      "lead": {
+        "displayName": "Lead — Montserrat Regular",
+        "purpose": "Hero sub-headlines and introductory paragraphs. One per hero or section, never stacked."
+      },
+      "body": {
+        "displayName": "Body — Montserrat Regular",
+        "purpose": "All prose. 65–75ch max line length. The default for all text not explicitly assigned to another level."
+      },
+      "label": {
+        "displayName": "Label — Montserrat Semibold Uppercase",
+        "purpose": "Eyebrow pattern (one per page max), badge text, category tags inside cards. Never for body-length copy."
+      },
+      "mono": {
+        "displayName": "Mono — JetBrains Mono",
+        "purpose": "Qualiopi certification codes, footer copyright, technical identifiers only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-low",
+        "value": "0 1px 0 rgba(45,40,32,0.05), 0 1px 2px rgba(45,40,32,0.06)",
+        "purpose": "Border-substitute on white cards resting on canvas. Interactive card hover baseline."
+      },
+      {
+        "name": "ambient-mid",
+        "value": "0 2px 4px rgba(45,40,32,0.07), 0 8px 24px -8px rgba(45,40,32,0.14)",
+        "purpose": "Interactive card hover state. Appears only as a response to hover/focus, never at rest."
+      },
+      {
+        "name": "elevated",
+        "value": "0 12px 40px -12px rgba(45,40,32,0.22)",
+        "purpose": "Genuinely floating surfaces: diagnostic card, booking funnel card, mobile drawer. Max one elevated element visible per viewport."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "Default easing for all state transitions and micro-interactions."
+      },
+      {
+        "name": "duration-fast",
+        "value": "0.15s",
+        "purpose": "Nav link hover, border color shifts, text color transitions."
+      },
+      {
+        "name": "duration-base",
+        "value": "0.18s–0.2s",
+        "purpose": "Button hover state, card border/shadow transitions."
+      },
+      {
+        "name": "duration-slow",
+        "value": "0.32s",
+        "purpose": "Diagnostic answer screen fade-up, drawer open animation."
+      },
+      {
+        "name": "fadeUp",
+        "value": "translateY(8px) → translateY(0), opacity 0 → 1, 0.32s ease-standard",
+        "purpose": "Diagnostic screen transitions, result card entrance."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile-nav", "value": "1000px", "purpose": "Desktop nav hidden, burger shown; grid collapses to 1-col." },
+      { "name": "bottom-bar", "value": "820px", "purpose": "Mobile sticky CTA bottom bar appears." },
+      { "name": "mobile", "value": "640px", "purpose": "Compact padding, stacked grid layouts, full-width CTAs." },
+      { "name": "mobile-xs", "value": "600px", "purpose": "Shell padding reduces to 22px; final layout adjustments." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one conversion action per context. Used for appointment booking, service access, and primary CTAs.",
+      "html": "<button class=\"ds-btn-primary\">Prendre rendez-vous <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn-primary { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 14px; line-height: 1; padding: 14px 22px; border-radius: 10px; border: 1px solid transparent; cursor: pointer; background: #8a3d67; color: #ffffff; display: inline-flex; align-items: center; gap: 9px; text-decoration: none; transition: background 0.18s cubic-bezier(0.2,0.8,0.2,1), transform 0.18s cubic-bezier(0.2,0.8,0.2,1); } .ds-btn-primary:hover { background: #471c32; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 2px solid #bc5e8e; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary conversion action. Paired with primary button in hero and CTA sections.",
+      "html": "<button class=\"ds-btn-secondary\">Voir le programme <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-btn-secondary { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 14px; line-height: 1; padding: 14px 22px; border-radius: 10px; border: 1px solid rgba(87,78,70,0.24); cursor: pointer; background: #ffffff; color: #2d2820; display: inline-flex; align-items: center; gap: 9px; text-decoration: none; transition: border-color 0.18s, color 0.18s; } .ds-btn-secondary:hover { border-color: #bc5e8e; color: #8a3d67; } .ds-btn-secondary:focus-visible { outline: 2px solid #8a3d67; outline-offset: 2px; }"
+    },
+    {
+      "name": "Value Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Brand values, categories, and soft tags. Pill shape, lotus tint surface.",
+      "html": "<span class=\"ds-chip\">Bienveillance</span>",
+      "css": ".ds-chip { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: #8a3d67; background: #faeaf1; border: 1px solid rgba(188,94,142,0.18); border-radius: 999px; padding: 7px 14px; display: inline-block; }"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "The three univers cards on the home page. Interactive, hover-animated, links to a service fiche.",
+      "html": "<a href=\"#\" class=\"ds-service-card\"><div class=\"ds-sc-tag\">Transition</div><div class=\"ds-sc-ico\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M17 1l4 4-4 4\"/><path d=\"M3 11V9a4 4 0 014-4h14\"/><path d=\"M7 23l-4-4 4-4\"/><path d=\"M21 13v2a4 4 0 01-4 4H3\"/></svg></div><h3 class=\"ds-sc-title\">Je suis dans le <u>FLOU</u>.</h3><p class=\"ds-sc-body\">Faire le point, se reconvertir, valider son expérience.</p><div class=\"ds-sc-arrow\">Explorer <svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M12 5l7 7-7 7\"/></svg></div></a>",
+      "css": ".ds-service-card { position: relative; background: #ffffff; border: 1px solid rgba(87,78,70,0.14); border-radius: 16px; padding: 28px 24px; display: flex; flex-direction: column; gap: 13px; text-decoration: none; color: inherit; cursor: pointer; box-shadow: 0 1px 0 rgba(45,40,32,0.05), 0 1px 2px rgba(45,40,32,0.06); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; } .ds-service-card:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(45,40,32,0.07), 0 8px 24px -8px rgba(45,40,32,0.14); border-color: rgba(188,94,142,0.4); } .ds-sc-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: #8a3d67; display: inline-flex; align-items: center; gap: 9px; } .ds-sc-tag::before { content: ''; width: 18px; height: 1.5px; background: currentColor; display: inline-block; } .ds-sc-ico { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: #faeaf1; color: #8a3d67; } .ds-sc-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 24px; letter-spacing: -0.01em; color: #2d2820; margin: 0; } .ds-sc-title u { text-decoration: none; font-weight: 800; } .ds-sc-body { font-size: 14px; line-height: 1.55; color: #574e46; margin: 0; } .ds-sc-arrow { margin-top: auto; display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: #2d2820; transition: gap 0.2s, color 0.2s; } .ds-service-card:hover .ds-sc-arrow { gap: 11px; color: #8a3d67; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Form field for the booking funnel. Matches card geometry with consistent border radius.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\">Prénom</label><input class=\"ds-input\" type=\"text\" placeholder=\"Votre prénom\" /></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; } .ds-field-label { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: #40392f; } .ds-input { font-family: 'Montserrat', sans-serif; font-size: 15px; color: #2d2820; background: #ffffff; border: 1px solid rgba(87,78,70,0.24); border-radius: 11px; padding: 13px 15px; width: 100%; transition: border-color 0.15s, box-shadow 0.15s; } .ds-input::placeholder { color: #c4bdb6; } .ds-input:focus { outline: none; border-color: #a24f7a; box-shadow: 0 0 0 3px rgba(188,94,142,0.16); } .ds-input.ds-input-err { border-color: #b4392b; }"
+    },
+    {
+      "name": "Diagnostic Option",
+      "kind": "custom",
+      "refersTo": "diagnostic-option",
+      "description": "La Passerelle's signature interaction: a branching answer button with keyboard key indicator, hover lift, and animated key-fill on hover.",
+      "html": "<button class=\"ds-diag-opt\"><div class=\"ds-diag-key\">A</div><div class=\"ds-diag-txt\"><span class=\"ds-diag-t\">Trouver ma voie</span><span class=\"ds-diag-s\">Pour les 15–25 ans en quête d'orientation</span></div><div class=\"ds-diag-go\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 18l6-6-6-6\"/></svg></div></button>",
+      "css": ".ds-diag-opt { text-align: left; width: 100%; cursor: pointer; background: #ffffff; border: 1px solid rgba(87,78,70,0.24); border-radius: 14px; padding: 16px 18px; display: flex; align-items: center; gap: 15px; font-family: 'Montserrat', sans-serif; transition: border-color 0.16s cubic-bezier(0.2,0.8,0.2,1), background 0.16s, box-shadow 0.16s, transform 0.16s; } .ds-diag-opt:hover { border-color: #bc5e8e; background: #faeaf1; transform: translateY(-1px); box-shadow: 0 1px 0 rgba(45,40,32,0.05), 0 1px 2px rgba(45,40,32,0.06); } .ds-diag-key { flex: none; width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; background: #f3efe6; color: #574e46; font-weight: 700; font-size: 14px; border: 1px solid rgba(87,78,70,0.14); transition: background 0.16s, color 0.16s, border-color 0.16s; } .ds-diag-opt:hover .ds-diag-key { background: #8a3d67; color: #ffffff; border-color: #8a3d67; } .ds-diag-txt { flex: 1; min-width: 0; } .ds-diag-t { font-weight: 600; font-size: 15.5px; color: #2d2820; display: block; } .ds-diag-s { font-size: 13px; color: #857d77; margin-top: 3px; line-height: 1.4; display: block; } .ds-diag-go { flex: none; color: #c4bdb6; transition: color 0.16s, transform 0.16s; } .ds-diag-opt:hover .ds-diag-go { color: #a24f7a; transform: translateX(2px); }"
+    },
+    {
+      "name": "Section Eyebrow",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The brand eyebrow: uppercase Label text preceded by a lotus rule-line. Used at most once per page.",
+      "html": "<p class=\"ds-eyebrow\">Bilans · VAE · Formations</p>",
+      "css": ".ds-eyebrow { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #a24f7a; margin: 0; display: inline-flex; align-items: center; gap: 12px; } .ds-eyebrow::before { content: ''; width: 28px; height: 1.5px; background: #bc5e8e; display: inline-block; flex: none; }"
+    },
+    {
+      "name": "Navigation Header",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Sticky header with warm canvas backdrop blur. Carries brand wordmark, nav links, and single CTA.",
+      "html": "<header class=\"ds-hdr\"><div class=\"ds-hdr-row ds-shell\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-gem-name\"><em>Gem'</em>Apprendre</span></a><nav class=\"ds-nav\"><a href=\"#\">Bilans</a><a href=\"#\">Formations</a><a href=\"#\">VAE</a><a href=\"#\" class=\"ds-nav-ga\"><u>Gem'</u>Apprendre</a></nav><a href=\"#\" class=\"ds-btn-primary ds-hdr-cta\">Prendre rendez-vous</a></div></header>",
+      "css": ".ds-hdr { position: sticky; top: 0; z-index: 40; background: rgba(251,248,242,0.86); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(87,78,70,0.14); } .ds-hdr-row { display: flex; align-items: center; gap: 36px; padding: 16px 40px; max-width: 1180px; margin: 0 auto; } .ds-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; } .ds-gem-name { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: -0.01em; color: #2d2820; white-space: nowrap; font-size: 19px; } .ds-gem-name em { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500; color: #bc5e8e; margin-right: 0.20em; } .ds-nav { display: flex; gap: 4px; margin-left: auto; } .ds-nav a { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; padding: 9px 13px; border-radius: 8px; white-space: nowrap; color: #40392f; text-decoration: none; transition: background 0.15s, color 0.15s; } .ds-nav a:hover { background: #f3efe6; color: #2d2820; } .ds-nav a u { text-decoration: none; font-weight: 800; color: #a24f7a; } .ds-hdr-cta { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; line-height: 1; padding: 14px 22px; border-radius: 10px; border: 1px solid transparent; cursor: pointer; background: #8a3d67; color: #ffffff; display: inline-flex; align-items: center; gap: 9px; text-decoration: none; transition: background 0.18s; } .ds-hdr-cta:hover { background: #471c32; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La Passerelle",
+    "overview": "La Passerelle is the bridge. Design carries people from uncertainty to clarity — each surface a deliberate stopping point on a journey they didn't know how to start. The system is not decorative. Every spacing decision, every type choice, every state transition exists to answer one implicit question from the user: \"Am I in the right place, and what do I do next?\"\n\nThe visual register is warm, professional, and specific to a person (Cynthia Roux) and a place (the south of France). Warmth is expressed through material — a canvas background that reads like good paper, two type families in deliberate contrast, an accent that appears when there is something to confirm or act on. The system never shouts and never hides. It guides.\n\nThis system explicitly rejects three aesthetic families. It is not the generic HR/EdTech SaaS register: flat blues, stock-photo grids, metric dashboards with gradient numbers, and \"empower your team\" copy. It is not cold institutional design: form-first layouts, no personality, a palette that reads like a government document. And it is not the cheap local directory: inconsistent radii, garish accent clashes, visual noise that erodes the trust a Qualiopi certification demands.",
+    "keyCharacteristics": [
+      "Warm canvas as the body ground; depth expressed through tonal stepping, not box-shadow",
+      "La Signature (the lotus accent) appears at most 15% of any surface; its scarcity is its authority",
+      "Two type families: Montserrat for structure, Cormorant Garamond italic for the one human moment per heading",
+      "Interaction is unhurried: 0.15–0.2s ease-out transitions, 1px vertical nudge on primary button, no scale transforms",
+      "Mobile is not a degradation; the diagnostic card and booking funnel serve anxious users on their phones first"
+    ],
+    "rules": [
+      {
+        "name": "The La Signature Rule",
+        "body": "La Signature (lotus) occupies at most 15% of any given surface. Its scarcity is its authority. When everything is lotus, nothing is. Use it where a trusted advisor would say 'this is the step to take.'",
+        "section": "colors"
+      },
+      {
+        "name": "The Canvas Hierarchy Rule",
+        "body": "Never place a white card on a white background, and never use canvas where white is needed for contrast. Canvas is the body ground. White is for cards that float above canvas.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Accent Rule",
+        "body": "La Signature and Provence Clay are peers, not partners. Do not mix them on the same interactive element. Terra signals proof and credential; lotus signals action and progression.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cormorant Restraint Rule",
+        "body": "Cormorant Garamond appears only italic. It fills only the one emphasized word or phrase within a Montserrat heading — the word that carries the human moment. If a heading has no such moment, Montserrat alone is the answer.",
+        "section": "typography"
+      },
+      {
+        "name": "The Eyebrow Scarcity Rule",
+        "body": "The eyebrow (Label-size uppercase Montserrat + 28px lotus rule-line) appears at most once per page. Its meaning comes from rarity. A page with an eyebrow on every section has no eyebrows — it has filler.",
+        "section": "typography"
+      },
+      {
+        "name": "The Scale Contract",
+        "body": "Between adjacent type levels, maintain at minimum a 1.25 weight or size step. A 16px body next to a 17px 'title' is not a hierarchy; it is noise.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal Depth Rule",
+        "body": "Reach for a canvas tint step before reaching for box-shadow. If the depth you need can be expressed by stepping from canvas to canvas-soft, that is the answer. Box-shadow answers 'this element floats above the page.'",
+        "section": "elevation"
+      },
+      {
+        "name": "The Ghost-Card Prohibition",
+        "body": "Never combine border: 1px solid X with box-shadow blur ≥ 16px on the same card. Pick one: a 1px border at the system's line-1 color, or a defined shadow at ≤ 8px blur.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use La Signature (lotus) for primary buttons, active states, and progress indicators only. Its authority is its scarcity.",
+      "Do differentiate depth by canvas tint (canvas → canvas-soft → canvas-deep) before reaching for box-shadow.",
+      "Do use Cormorant Garamond only in italic, only for the one expressive word within a Montserrat heading.",
+      "Do apply text-wrap: balance on all h1–h3. French words are long; unbalanced wraps on narrow mobile screens are the most common presentation failure on this site.",
+      "Do verify ink-muted (oklch 58%) clears 4.5:1 contrast against white before using it for body-size text.",
+      "Do surface the Qualiopi seal on every page that discusses pricing or CPF eligibility.",
+      "Do write verb+object button labels in French: 'Prendre rendez-vous', 'Voir le programme', 'Télécharger le guide'.",
+      "Do ensure link text has standalone meaning when read out of context."
+    ],
+    "donts": [
+      "Don't use the generic HR/EdTech SaaS visual language: flat blues, stock-photo grids, metric-dashboard stats blocks with gradient number highlights.",
+      "Don't design for a cold institutional register: form-first layouts, black-and-white palette, bureaucratic information architecture.",
+      "Don't produce the cheap local directory aesthetic: inconsistent radii, garish accent color clashes, cluttered navigation, font-weight chaos.",
+      "Don't use background-clip: text with a gradient (gradient text). La Signature is a single solid color.",
+      "Don't use border-left or border-right greater than 1px as a colored accent stripe on cards or callouts.",
+      "Don't add a Label-size uppercase eyebrow above every section. One per page maximum.",
+      "Don't pair La Signature and Provence Clay on the same interactive element.",
+      "Don't use border-radius above 24px on cards or containers.",
+      "Don't gate content visibility on a motion-triggered class. All content must render visible without JavaScript animation prerequisites.",
+      "Don't combine border: 1px solid X with box-shadow blur ≥ 16px on the same element (the ghost-card pattern)."
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+@import './tokens.css';
+@import './gem.css';
+
+@theme {
+  /* Fonts */
+  --font-sans: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Brand palette as Tailwind utilities */
+  --color-lotus-50: #faeaf1;
+  --color-lotus-100: #f4d6e3;
+  --color-lotus-200: #f0cfdd;
+  --color-lotus-500: #bc5e8e;
+  --color-lotus-600: #a24f7a;
+  --color-lotus-700: #8a3d67;
+  --color-lotus-900: #471c32;
+
+  --color-terracotta-50: #fbefe8;
+  --color-terracotta-100: #f6dccc;
+  --color-terracotta-500: #d9744e;
+  --color-terracotta-600: #c25f3a;
+  --color-terracotta-700: #9e4a2d;
+
+  --color-paper: #fbf8f2;
+  --color-paper-soft: #f3efe6;
+  --color-paper-deep: #ece6d8;
+
+  --color-ink-900: oklch(22% 0.005 60);
+  --color-ink-800: oklch(30% 0.006 60);
+  --color-ink-700: oklch(40% 0.006 60);
+  --color-ink-500: oklch(48% 0.006 60);
+  --color-ink-300: oklch(78% 0.005 60);
+
+  /* shadcn/ui required CSS variable mappings */
+  --color-background: var(--paper);
+  --color-foreground: var(--ink-900);
+  --color-card: var(--white, #ffffff);
+  --color-card-foreground: var(--ink-900);
+  --color-primary: var(--lotus-700);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--paper-soft);
+  --color-secondary-foreground: var(--ink-900);
+  --color-muted: var(--paper-soft);
+  --color-muted-foreground: var(--ink-500);
+  --color-accent: var(--lotus-50);
+  --color-accent-foreground: var(--lotus-700);
+  --color-destructive: #b4392b;
+  --color-destructive-foreground: #ffffff;
+  --color-border: color-mix(in oklab, var(--ink-700) 14%, transparent);
+  --color-input: color-mix(in oklab, var(--ink-700) 14%, transparent);
+  --color-ring: var(--lotus-600);
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}

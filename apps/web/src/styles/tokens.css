@@ -1,0 +1,139 @@
+/* ============================================================
+   GROUPE GEM — Design Tokens
+   Verbatim :root block from the prototype (tokens.css).
+   Google Fonts @import is handled in globals.css.
+   ============================================================ */
+
+:root {
+  /* ---- Core neutral scale (warm graphite) ----- */
+  --ink-900: oklch(22% 0.005 60);
+  --ink-800: oklch(30% 0.006 60);
+  --ink-700: oklch(40% 0.006 60);
+  --ink-500: oklch(48% 0.006 60); /* bumped from 58% — 58% fails 4.5:1 on white */
+  --ink-300: oklch(78% 0.005 60);
+  --ink-200: oklch(88% 0.004 60);
+  --ink-100: oklch(94% 0.004 60);
+  --ink-50:  oklch(97% 0.003 60);
+
+  /* ---- Paper / canvas ----- */
+  --paper:        #FBF8F2;
+  --paper-soft:   #F3EFE6;
+  --paper-deep:   #ECE6D8;
+  --white:        #FFFFFF;
+
+  /* ---- Brand primary: terracotta ----- */
+  --terracotta-50:  #FBEFE8;
+  --terracotta-100: #F6DCCC;
+  --terracotta-200: #F1C0A6;
+  --terracotta-300: #EAA17F;
+  --terracotta-400: #E08A62;
+  --terracotta-500: #D9744E;
+  --terracotta-600: #C25F3A;
+  --terracotta-700: #9E4A2D;
+  --terracotta-800: #783823;
+  --terracotta-900: #4C2316;
+
+  /* ---- Brand accents ----- */
+  --lotus-50:       #FAEAF1;
+  --lotus-100:      #F4D6E3;
+  --lotus-200:      #F0CFDD;
+  --lotus-500:      #BC5E8E;
+  --lotus-600:      #A24F7A;
+  --lotus-700:      #8A3D67;
+  --lotus-900:      #471C32;
+  --periwinkle-500: #5C8FC4;
+  --periwinkle-200: #D1DEEC;
+  --leaf-500:       #4DA972;
+  --leaf-200:       #CCE4D4;
+  --ruby-500:       #B7344A;
+  --ruby-200:       #ECC9CE;
+
+  /* ---- Semantic states ----- */
+  --success:    #2F8F5E;
+  --success-bg: #E4F2EA;
+  --warning:    #9F6C12;
+  --warning-bg: #FAEFD2;
+  --danger:     #B4392B;
+  --danger-bg:  #F6DCD7;
+  --info:       #2D6BA8;
+  --info-bg:    #DCE7F3;
+
+  /* ---- Semantic foreground ----- */
+  --fg-1: var(--ink-900);
+  --fg-2: var(--ink-800);
+  --fg-3: var(--ink-500);
+  --fg-on-primary: var(--white);
+  --fg-on-dark:    var(--paper);
+
+  /* ---- Surfaces ----- */
+  --surface-0: var(--paper);
+  --surface-1: var(--white);
+  --surface-2: var(--paper-soft);
+  --surface-3: var(--paper-deep);
+  --surface-inverse: var(--ink-900);
+
+  /* ---- Lines ----- */
+  --line-1: color-mix(in oklab, var(--ink-700) 14%, transparent);
+  --line-2: color-mix(in oklab, var(--ink-700) 24%, transparent);
+  --line-strong: var(--ink-800);
+
+  /* ---- Type families ----- */
+  --font-sans:    "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Cormorant Garamond", "Bell MT", "EB Garamond", Georgia, serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* ---- Type scale ----- */
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-21: 1.3125rem;
+  --fs-26: 1.625rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-52: 3.25rem;
+  --fs-72: 4.5rem;
+
+  --lh-tight:  1.1;
+  --lh-snug:   1.25;
+  --lh-normal: 1.5;
+  --lh-loose:  1.7;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.08em;
+  --tracking-wider:   0.16em;
+
+  /* ---- Radii ----- */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-pill: 999px;
+
+  /* ---- Shadows ----- */
+  --shadow-1: 0 1px 0 color-mix(in oklab, var(--ink-900) 5%, transparent),
+              0 1px 2px color-mix(in oklab, var(--ink-900) 6%, transparent);
+  --shadow-2: 0 2px 4px color-mix(in oklab, var(--ink-900) 7%, transparent),
+              0 8px 24px -8px color-mix(in oklab, var(--ink-900) 14%, transparent);
+  --shadow-3: 0 12px 40px -12px color-mix(in oklab, var(--ink-900) 22%, transparent);
+  --shadow-inset: inset 0 0 0 1px var(--line-1);
+
+  /* ---- Spacing ----- */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  /* ---- Container ----- */
+  --container-narrow: 720px;
+  --container:        1120px;
+  --container-wide:   1320px;
+}

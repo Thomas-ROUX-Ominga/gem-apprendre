@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gem'Apprendre — Maquette haute fidélité</title>
+<link rel="stylesheet" href="tokens.css" />
+<link rel="stylesheet" href="core.css" />
+<link rel="stylesheet" href="pages.css" />
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="image-slot.js"></script>
+</head>
+<body class="ga-page">
+<div id="root"></div>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="Icon.jsx"></script>
+<script type="text/babel" src="flow-data.jsx"></script>
+<script type="text/babel" src="fiche-data.jsx"></script>
+<script type="text/babel" src="Diagnostic.jsx"></script>
+<script type="text/babel" src="Home.jsx"></script>
+<script type="text/babel" src="Fiche.jsx"></script>
+<script type="text/babel" src="Rdv.jsx"></script>
+<script type="text/babel" src="Cynthia.jsx"></script>
+
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+// expose context BEFORE components render
+const NavCtx = React.createContext(null);
+window.NavCtx = NavCtx;
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "disposition": "côte à côte",
+  "densite": "aéré",
+  "accroche": "directe",
+  "titres": "sans",
+  "prix": true,
+  "accent": [
+    "#BC5E8E",
+    "#A24F7A",
+    "#8A3D67",
+    "#FAEAF1",
+    "#F4D6E3"
+  ]
+}/*EDITMODE-END*/;
+
+function parseRoute() {
+  const h = (location.hash || "").replace(/^#/, "");
+  if (!h || h === "/") return { name: "home" };
+  const [path, qs] = h.split("?");
+  const query = {};
+  (qs || "").split("&").forEach((kv) => { if (!kv) return; const [k, v] = kv.split("="); query[k] = decodeURIComponent(v || ""); });
+  const parts = path.split("/").filter(Boolean);
+  if (parts[0] === "fiche") return { name: "fiche", family: parts[1] || "bilan" };
+  if (parts[0] === "rdv") return { name: "rdv", query };
+  if (parts[0] === "cynthia") return { name: "cynthia" };
+  return { name: "home" };
+}
+
+function scrollToSection(id) {
+  const el = document.getElementById(id);
+  if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 68, behavior: "smooth" });
+  else window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const [route, setRoute] = useState(parseRoute());
+  const pendingScroll = useRef(null);
+
+  useEffect(() => {
+    const onHash = () => setRoute(parseRoute());
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+
+  // on route change: scroll to top (or pending section)
+  useEffect(() => {
+    if (route.name === "home" && pendingScroll.current) {
+      const id = pendingScroll.current; pendingScroll.current = null;
+      requestAnimationFrame(() => setTimeout(() => scrollToSection(id), 60));
+    } else if (route.name !== "home") {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  }, [route]);
+
+  const nav = {
+    route,
+    go(hash) { if (("#" + (location.hash || "").replace(/^#/, "")) === hash) { setRoute(parseRoute()); } location.hash = hash; window.scrollTo({ top: 0, behavior: "auto" }); },
+    section(id) {
+      if (route.name === "home") scrollToSection(id);
+      else { pendingScroll.current = id; location.hash = "#/"; }
+    },
+  };
+
+  // ---- apply tweaks to <body> / :root ----
+  useEffect(() => { document.body.classList.toggle("layout-centre", t.disposition === "centré"); }, [t.disposition]);
+  useEffect(() => { document.body.classList.toggle("density-compact", t.densite === "compact"); }, [t.densite]);
+  useEffect(() => { document.body.classList.toggle("titles-serif", t.titres === "serif"); }, [t.titres]);
+  useEffect(() => { document.body.classList.toggle("hide-prices", !t.prix); }, [t.prix]);
+  useEffect(() => {
+    const a = Array.isArray(t.accent) ? t.accent : [t.accent];
+    const r = document.documentElement.style;
+    const set = (k, v) => v && r.setProperty(k, v);
+    set("--lotus-500", a[0]); set("--lotus-600", a[1] || a[0]);
+    set("--lotus-700", a[2] || a[1] || a[0]);
+    set("--lotus-50", a[3] || "#FAEAF1"); set("--lotus-100", a[4] || "#F4D6E3");
+  }, [t.accent]);
+
+  let page;
+  if (route.name === "fiche") page = <Fiche family={route.family} />;
+  else if (route.name === "rdv") page = <Rdv presetFamily={route.query && route.query.s} />;
+  else if (route.name === "cynthia") page = <Cynthia />;
+  else page = <Home accroche={t.accroche} badge30={true} />;
+
+  return (
+    <NavCtx.Provider value={nav}>
+      <div id="top">
+        <Header />
+        <main>{page}</main>
+        <Footer />
+        <BottomBar />
+
+        <TweaksPanel title="Tweaks">
+          <TweakSection label="Mise en page" />
+          <TweakRadio label="Disposition hero" value={t.disposition}
+            options={["côte à côte", "centré"]}
+            onChange={(v) => setTweak("disposition", v)} />
+          <TweakRadio label="Densité" value={t.densite}
+            options={["aéré", "compact"]}
+            onChange={(v) => setTweak("densite", v)} />
+          <TweakSection label="Ton & typographie" />
+          <TweakSelect label="Accroche" value={t.accroche}
+            options={["posée", "directe", "chaleureuse"]}
+            onChange={(v) => setTweak("accroche", v)} />
+          <TweakRadio label="Titres" value={t.titres}
+            options={["sans", "serif"]}
+            onChange={(v) => setTweak("titres", v)} />
+          <TweakToggle label="Afficher les prix" value={t.prix}
+            onChange={(v) => setTweak("prix", v)} />
+          <TweakSection label="Couleur d'accent" />
+          <TweakColor label="Accent" value={t.accent}
+            options={[
+              ["#BC5E8E", "#A24F7A", "#8A3D67", "#FAEAF1", "#F4D6E3"],
+              ["#D9744E", "#C25F3A", "#9E4A2D", "#FBEFE8", "#F6DCCC"],
+              ["#9B5BA6", "#834A8E", "#5E3268", "#F3E9F4", "#E6D2EA"]
+            ]}
+            onChange={(v) => setTweak("accent", v)} />
+        </TweaksPanel>
+      </div>
+    </NavCtx.Provider>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+
+<style id="__om-edit-overrides"></style>
+</body>
+</html>

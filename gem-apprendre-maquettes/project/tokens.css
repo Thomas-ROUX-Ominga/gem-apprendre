@@ -1,0 +1,274 @@
+/* ============================================================
+   GROUPE GEM — Colors & Type
+   Modernized from the 2020 "Charte graphique Gem'Bien"
+   Anchors: warm terracotta + graphite + ivory.
+   Each sub-brand keeps a small accent of its historical color.
+   ============================================================ */
+
+/* ---- Fonts ------------------------------------------------- */
+/* Montserrat is specified in the original charte (exact).      */
+/* Cormorant Garamond is a Google Fonts SUBSTITUTE for "Bell MT" */
+/* (proprietary). Same transitional-serif feel, elegant italics. */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ---- Core neutral scale (warm graphite, modernized) ----- */
+  --ink-900: oklch(22% 0.005 60);   /* deepest – body on ivory */
+  --ink-800: oklch(30% 0.006 60);   /* default text */
+  --ink-700: oklch(40% 0.006 60);   /* charte's "gris foncé" #666767 ≈ here */
+  --ink-500: oklch(58% 0.006 60);   /* muted, captions */
+  --ink-300: oklch(78% 0.005 60);   /* hairlines, dividers */
+  --ink-200: oklch(88% 0.004 60);   /* light divider */
+  --ink-100: oklch(94% 0.004 60);   /* subtle fill */
+  --ink-50:  oklch(97% 0.003 60);   /* near-white surface */
+
+  /* ---- Paper / canvas ----- */
+  --paper:        #FBF8F2;          /* warm ivory — main background */
+  --paper-soft:   #F3EFE6;          /* card / section panel */
+  --paper-deep:   #ECE6D8;          /* press / sunken */
+  --white:        #FFFFFF;
+
+  /* ---- Brand primary: terracotta (the orange roof / hands) -- */
+  /* Charte hex: #EA7B55. Modernized slightly deeper + warmer.   */
+  --terracotta-50:  #FBEFE8;
+  --terracotta-100: #F6DCCC;
+  --terracotta-200: #F1C0A6;
+  --terracotta-300: #EAA17F;
+  --terracotta-400: #E08A62;
+  --terracotta-500: #D9744E;        /* PRIMARY */
+  --terracotta-600: #C25F3A;
+  --terracotta-700: #9E4A2D;
+  --terracotta-800: #783823;
+  --terracotta-900: #4C2316;
+
+  /* ---- Brand-line accents (from sub-brand logos) ---------- */
+  /* Used SPARINGLY — one accent per surface, never as a primary fill. */
+  /* Tuned to match terracotta's energy (chroma ≈0.10–0.14) so all five */
+  /* read with equal weight, while staying clearly distinct in hue.     */
+  --lotus-50:       #FAEAF1;
+  --lotus-100:      #F4D6E3;
+  --lotus-200:      #F0CFDD;
+  --lotus-500:      #BC5E8E;        /* Gem'Apprendre / Ad&Coach (vivid dusty rose) */
+  --lotus-600:      #A24F7A;
+  --lotus-700:      #8A3D67;
+  --lotus-900:      #471C32;
+  --periwinkle-500: #5C8FC4;        /* Gem'Lire (cornflower blue, clearly cool) */
+  --periwinkle-200: #D1DEEC;
+  --leaf-500:       #4DA972;        /* Gem'Foncier (emerald-sage, clearly green) */
+  --leaf-200:       #CCE4D4;
+  --ruby-500:       #B7344A;        /* Gem'Conseil (true ruby red, pushed cooler than terracotta) */
+  --ruby-200:       #ECC9CE;
+
+  /* ---- Semantic states ---- */
+  /* Picked for AA contrast on white (≥4.5 for text). */
+  --success:    #2F8F5E;  /* 4.6 on white */
+  --success-bg: #E4F2EA;
+  --warning:    #9F6C12;  /* 5.1 on white — darker than the orange swatch */
+  --warning-bg: #FAEFD2;
+  --danger:     #B4392B;  /* 5.7 on white */
+  --danger-bg:  #F6DCD7;
+  --info:       #2D6BA8;  /* 5.6 on white — independent of the dusty periwinkle */
+  --info-bg:    #DCE7F3;
+
+  /* ---- Foreground tokens (semantic) ----- */
+  --fg-1: var(--ink-900);           /* headlines */
+  --fg-2: var(--ink-800);           /* body */
+  --fg-3: var(--ink-500);           /* muted captions */
+  --fg-on-primary: var(--white);
+  --fg-on-dark:    var(--paper);
+
+  /* ---- Surfaces ---- */
+  --surface-0: var(--paper);
+  --surface-1: var(--white);
+  --surface-2: var(--paper-soft);
+  --surface-3: var(--paper-deep);
+  --surface-inverse: var(--ink-900);
+
+  /* ---- Lines ---- */
+  --line-1: color-mix(in oklab, var(--ink-700) 14%, transparent);
+  --line-2: color-mix(in oklab, var(--ink-700) 24%, transparent);
+  --line-strong: var(--ink-800);
+
+  /* ---- Type families ---- */
+  --font-sans:    "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Cormorant Garamond", "Bell MT", "EB Garamond", Georgia, serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* ---- Type scale (modular 1.250) ---- */
+  --fs-12: 0.75rem;   /* caption / micro */
+  --fs-14: 0.875rem;  /* small */
+  --fs-16: 1rem;      /* body */
+  --fs-18: 1.125rem;  /* large body */
+  --fs-21: 1.3125rem; /* h5 / lead */
+  --fs-26: 1.625rem;  /* h4 */
+  --fs-32: 2rem;      /* h3 */
+  --fs-40: 2.5rem;    /* h2 */
+  --fs-52: 3.25rem;   /* h1 */
+  --fs-72: 4.5rem;    /* display */
+
+  --lh-tight:  1.1;
+  --lh-snug:   1.25;
+  --lh-normal: 1.5;
+  --lh-loose:  1.7;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.08em;
+  --tracking-wider:   0.16em;     /* eyebrow caps */
+
+  /* ---- Radii (subtle, never pill except on chips) ---- */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-pill: 999px;
+
+  /* ---- Shadows (warm, low) ---- */
+  --shadow-1: 0 1px 0 color-mix(in oklab, var(--ink-900) 5%, transparent),
+              0 1px 2px color-mix(in oklab, var(--ink-900) 6%, transparent);
+  --shadow-2: 0 2px 4px color-mix(in oklab, var(--ink-900) 7%, transparent),
+              0 8px 24px -8px color-mix(in oklab, var(--ink-900) 14%, transparent);
+  --shadow-3: 0 12px 40px -12px color-mix(in oklab, var(--ink-900) 22%, transparent);
+  --shadow-inset: inset 0 0 0 1px var(--line-1);
+
+  /* ---- Spacing (4-step) ---- */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  24px;
+  --sp-6:  32px;
+  --sp-7:  48px;
+  --sp-8:  64px;
+  --sp-9:  96px;
+  --sp-10: 128px;
+
+  /* ---- Container ---- */
+  --container-narrow: 720px;
+  --container:        1120px;
+  --container-wide:   1320px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE RULES — use these classes / tags directly
+   ============================================================ */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  line-height: var(--lh-normal);
+  color: var(--fg-2);
+  background: var(--paper);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.display, h1.display {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: var(--fs-72);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+
+h1, .h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-52);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+h2, .h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-40);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+  text-wrap: balance;
+}
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-32);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-26);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+h5, .h5 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-21);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+h6, .h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-16);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--fg-1);
+}
+
+/* "Eyebrow" — the small all-caps line above titles. Core to the brand. */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-12);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--terracotta-600);
+}
+
+/* Italic serif — used for tag-lines, pull quotes, signatures.
+   Echoes the original charte's Bell MT italic usage. */
+.tagline, blockquote, .pull-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--fg-2);
+}
+.tagline { font-size: var(--fs-21); line-height: var(--lh-snug); }
+blockquote, .pull-quote {
+  font-size: var(--fs-26);
+  line-height: var(--lh-snug);
+  color: var(--fg-1);
+}
+
+p, .body { font-size: var(--fs-16); line-height: var(--lh-normal); color: var(--fg-2); }
+.lead { font-size: var(--fs-18); line-height: var(--lh-normal); color: var(--fg-2); }
+small, .caption { font-size: var(--fs-12); color: var(--fg-3); }
+
+a {
+  color: var(--terracotta-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in oklab, var(--terracotta-500) 50%, transparent);
+}
+a:hover {
+  color: var(--terracotta-700);
+  text-decoration-color: var(--terracotta-600);
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--surface-2);
+  padding: 2px 6px;
+  border-radius: var(--r-xs);
+}
+
+::selection { background: var(--terracotta-200); color: var(--terracotta-900); }
