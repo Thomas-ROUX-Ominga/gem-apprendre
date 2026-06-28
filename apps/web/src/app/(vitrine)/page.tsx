@@ -63,6 +63,14 @@ export default function HomePage() {
     <>
       {/* ---- HERO ---- */}
       <section className="hero" id="diagnostic">
+        <div className="hero-waves" aria-hidden="true">
+          <Waves
+            lineColor="#bc5e8e"
+            backgroundColor="transparent"
+            waveSpeedX={0.012}
+            waveSpeedY={0.004}
+          />
+        </div>
         <div className="shell hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">
@@ -85,14 +93,6 @@ export default function HomePage() {
             </div>
           </div>
           <Diagnostic />
-        </div>
-        <div className="hero-waves" aria-hidden="true">
-          <Waves
-            lineColor="#bc5e8e"
-            backgroundColor="transparent"
-            waveSpeedX={0.012}
-            waveSpeedY={0.004}
-          />
         </div>
       </section>
 
