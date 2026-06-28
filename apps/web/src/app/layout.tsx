@@ -1,9 +1,5 @@
 import type { Metadata } from 'next'
 import '../styles/globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import BottomBar from '@/components/BottomBar'
-import Tarteaucitron from '@/components/Tarteaucitron'
 
 export const metadata: Metadata = {
   title: {
@@ -23,13 +19,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <body className="ga-page">
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <BottomBar />
-        <Tarteaucitron />
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

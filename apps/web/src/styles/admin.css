@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@theme {
+.admin-root {
   --color-background: #ffffff;
   --color-foreground: oklch(22% 0.005 60);
   --color-card: #ffffff;
@@ -19,4 +19,8 @@
   --color-input: #e7e5e4;
   --color-ring: #a24f7a;
   --radius: 0.5rem;
+
+  min-height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }

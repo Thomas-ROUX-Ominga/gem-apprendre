@@ -8,7 +8,7 @@ export async function middleware(request: NextRequest) {
   const session = res.ok ? await res.json() : null
 
   if (!session?.user) {
-    const loginUrl = new URL('/login', request.url)
+    const loginUrl = new URL('/admin/login', request.url)
     loginUrl.searchParams.set('callbackUrl', request.nextUrl.pathname)
     return NextResponse.redirect(loginUrl)
   }
@@ -17,5 +17,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*'],
+  matcher: ['/admin/dashboard/:path*'],
 }

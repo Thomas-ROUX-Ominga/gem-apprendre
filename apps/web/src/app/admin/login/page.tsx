@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Connexion — Gem'Apprendre Admin",
+  title: "Connexion — Admin Gem'Apprendre",
 }
 
 export default function LoginPage() {
@@ -12,7 +12,7 @@ export default function LoginPage() {
           <h1 className="text-2xl font-bold tracking-tight">Administration</h1>
           <p className="text-sm text-muted-foreground mt-1">Gem&apos;Apprendre</p>
         </div>
-        {/* Login form — implement with BetterAuth client when ready */}
+        {/* Login form — à implémenter avec BetterAuth client */}
         <p className="text-sm text-muted-foreground text-center">
           Authentification à configurer.
         </p>

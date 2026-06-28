@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Tableau de bord — Gem'Apprendre Admin",
+  title: "Tableau de bord — Admin Gem'Apprendre",
 }
 
 export default function DashboardPage() {
