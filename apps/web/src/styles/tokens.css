@@ -136,4 +136,7 @@
   --container-narrow: 720px;
   --container:        1120px;
   --container-wide:   1320px;
+
+  /* ---- Layout ----- */
+  --hdr-h: 81px;
 }
