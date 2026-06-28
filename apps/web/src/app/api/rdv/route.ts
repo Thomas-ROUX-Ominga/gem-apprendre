@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+export const dynamic = 'force-dynamic'
+
 const TO = 'cynthia.roux13@gmail.com'
-const FROM = process.env.RESEND_FROM ?? 'Gem\'Apprendre <noreply@gemapprendre.fr>'
+const FROM = process.env.RESEND_FROM ?? "Gem'Apprendre <noreply@gemapprendre.fr>"
 
 const SUBJECT_LABELS: Record<string, string> = {
   orientation: "Bilan d'orientation (15-25 ans)",
@@ -71,6 +72,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Champs obligatoires manquants.' }, { status: 400 })
     }
 
+    const resend = new Resend(process.env.RESEND_API_KEY)
     const subjectLabel = SUBJECT_LABELS[subject] ?? 'À préciser ensemble'
 
     const [adminResult, confirmResult] = await Promise.all([
